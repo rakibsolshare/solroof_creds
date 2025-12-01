@@ -63,7 +63,7 @@ export default function DetailScreen({ route, navigation }: Props) {
 
                 <View style={styles.divider} />
                 <View style={styles.divider} />
-                <Text style={styles.sectionHeader}>Inverter Details</Text>
+                <Text style={styles.sectionHeader}>Equipment Installed</Text>
 
                 {/* Legacy Support */}
                 {(plant.inverterSerial || plant.inverterIp) && (
@@ -76,7 +76,7 @@ export default function DetailScreen({ route, navigation }: Props) {
                     </View>
                 )}
 
-                {/* New Inverters List */}
+                {/* Equipment Installed List */}
                 {plant.inverters?.map((inverter, index) => (
                     <View key={index} style={styles.inverterBlock}>
                         <Text style={styles.inverterTitle}>Inverter {index + 1}</Text>
@@ -91,7 +91,7 @@ export default function DetailScreen({ route, navigation }: Props) {
                 ))}
 
                 {!plant.inverterSerial && !plant.inverterIp && (!plant.inverters || plant.inverters.length === 0) && (
-                    <Text style={styles.noDataText}>No inverters added.</Text>
+                    <Text style={styles.noDataText}>No equipment installed.</Text>
                 )}
 
                 <View style={styles.divider} />

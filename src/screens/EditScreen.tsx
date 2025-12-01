@@ -82,7 +82,7 @@ export default function EditScreen({ route, navigation }: Props) {
                         keyboardType="numeric"
                     />
 
-                    <Text style={styles.sectionHeader}>Inverters</Text>
+                    <Text style={styles.sectionHeader}>Equipment Installed</Text>
                     {(formData.inverters || []).map((inverter, index) => (
                         <View key={index} style={styles.inverterContainer}>
                             <View style={styles.inverterHeader}>
@@ -176,7 +176,7 @@ export default function EditScreen({ route, navigation }: Props) {
                             handleChange('inverters', newInverters as any);
                         }}
                     >
-                        <Text style={styles.addButtonText}>+ Add Inverter</Text>
+                        <Text style={styles.addButtonText}>+ Add Equipment</Text>
                     </TouchableOpacity>
 
                     <Text style={styles.sectionHeader}>Network</Text>
@@ -215,6 +215,7 @@ export default function EditScreen({ route, navigation }: Props) {
                             value={formData.notes || ''}
                             onChangeText={(text) => handleChange('notes', text)}
                             placeholder="Additional details..."
+                            placeholderTextColor="#999"
                             multiline
                             numberOfLines={4}
                         />
@@ -245,6 +246,7 @@ const InputField = ({ label, value, onChangeText, placeholder, keyboardType = 'd
             value={value?.toString() || ''}
             onChangeText={onChangeText}
             placeholder={placeholder}
+            placeholderTextColor="#999"
             keyboardType={keyboardType}
             secureTextEntry={secureTextEntry}
             autoCapitalize="none"
@@ -286,6 +288,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 12,
         fontSize: 16,
+        color: '#000',
     },
     textArea: {
         height: 100,

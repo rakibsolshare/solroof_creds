@@ -50,6 +50,7 @@ export default function LoginScreen() {
                             value={username}
                             onChangeText={setUsername}
                             placeholder="Enter username"
+                            placeholderTextColor="#999"
                             autoCapitalize="none"
                             autoCorrect={false}
                         />
@@ -62,6 +63,7 @@ export default function LoginScreen() {
                             value={password}
                             onChangeText={setPassword}
                             placeholder="Enter password"
+                            placeholderTextColor="#999"
                             secureTextEntry
                             autoCapitalize="none"
                         />
@@ -81,7 +83,7 @@ export default function LoginScreen() {
                         )}
                     </TouchableOpacity>
 
-                    <Text style={styles.hint}>Default: solshare / solshare@25</Text>
+
                 </View>
             </View>
         </KeyboardAvoidingView>
@@ -137,6 +139,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 12,
         fontSize: 16,
+        color: '#000',
     },
     button: {
         backgroundColor: '#007AFF',

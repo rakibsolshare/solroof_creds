@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Solar Database",
-    "slug": "solar_database",
+    "name": "SOLroof Plant Credentials",
+    "slug": "solroof_plant_credentials",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,16 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.solshare.solroof_plant_credentials"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3e103e14-ad41-4d7d-91ca-586b05d5cc69"
+      }
     }
   }
 }
